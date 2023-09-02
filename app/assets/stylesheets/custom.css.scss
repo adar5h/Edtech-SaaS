@@ -3,6 +3,9 @@
     border:black;
     margin-bottom:0px;
 }
+.navbar-brand{
+    color:white!important;
+}
 #nb {
     box-shadow: 5px 5px 10px whitesmoke;
     background: #171717 !important;
@@ -43,20 +46,23 @@
 }
 
 .line:nth-child(1) {
-    margin-left: -538px;
+    margin-left: -35%;
 }
-
 .line:nth-child(1)::after {
     animation-delay: 0.5s;
 }
 .line:nth-child(3) {
-    margin-left: -330px;
+    display:none;
+    margin-left: -10%;
+}
+.line:nth-child(2) {
+    margin-left: -21.5%;
 }
 .line:nth-child(4) {
-    margin-left: 46%;
+    margin-left: 25%;
 }
 .line:nth-child(5) {
-    margin-left: 34%;
+    margin-left: 38%;
 }
 
 .line:nth-child(3)::after {
@@ -176,4 +182,9 @@ padding:0;
 
 .button-35:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+.icon{
+    position:absolute;
+    left:670px;
+    top:80px;
 }
