@@ -1,49 +1,53 @@
-<div class="container1 demo">
-     <div class="content">
-        <div id="large-header" class="large-header">
-          <canvas id="demo-canvas"></canvas>
-          <%= image_tag "icon.png", class: 'icon'%>
-          <h1 class="main-title"><span class="thin">EdTech</span>  SaaS</h1>
-          <div class="row">
-            <div class="plans clearfix">
-            <div class="card col-lg-3 col-lg-offset-3 plan">
-                <h2>Premium Plan</h2>
-                <div class="price pull-right">
-                Price: ₹1000
+<% if current_user %>
+    <h3>Organization: <%= @tenant.name %></h3>
+<% else %>
+    <div class="container1 demo">
+        <div class="content">
+            <div id="large-header" class="large-header">
+            <canvas id="demo-canvas"></canvas>
+            <%= image_tag "icon.png", class: 'icon'%>
+            <h1 class="main-title"><span class="thin">EdTech</span>  SaaS</h1>
+            <div class="row">
+                <div class="plans clearfix">
+                <div class="card col-lg-3 col-lg-offset-3 plan">
+                    <h2>Premium Plan</h2>
+                    <div class="price pull-right">
+                    Price: ₹1000
+                    </div>
+                    <div class="features">
+                    <ul>
+                        <li>Unlimited Image Uploads</li>
+                        <li>Responsive design</li>
+                        <li>Access anywhere</li>
+                    </ul>
+                    </div>
+                    <p>
+                    <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
+                    </p>
                 </div>
-                <div class="features">
-                <ul>
-                    <li>Unlimited Image Uploads</li>
-                    <li>Responsive design</li>
-                    <li>Access anywhere</li>
-                </ul>
-                </div>
-                <p>
-                <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
-                </p>
-            </div>
-            <div class="card col-lg-3 plan">
-                <h2>Amaze Plan</h2>
-                <div class="price pull-right">
-                Price: ₹2000
-                </div>
-                <div class="features">
-                <ul>
-                    <li>Unlimited Image</li>
-                    <li>Responsive design</li>
-                    <li>Access anywhere</li>
-                    <li class='extra'>Unlimited projects</li>
-                </ul>
-                </div>
-                <p>
-                <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
+                <div class="card col-lg-3 plan">
+                    <h2>Amaze Plan</h2>
+                    <div class="price pull-right">
+                    Price: ₹2000
+                    </div>
+                    <div class="features">
+                    <ul>
+                        <li>Unlimited Image</li>
+                        <li>Responsive design</li>
+                        <li>Access anywhere</li>
+                        <li class='extra'>Unlimited projects</li>
+                    </ul>
+                    </div>
+                    <p>
+                    <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
 
-                </p>
+                    </p>
+                </div>
+                </div>
             </div>
+
             </div>
         </div>
-
         </div>
-      </div>
     </div>
-</div>
+<%end%>
