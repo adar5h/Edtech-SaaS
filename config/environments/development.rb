@@ -1,5 +1,5 @@
 Rails.application.configure do
-   
+
   # devise says to define default url
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
@@ -70,7 +70,7 @@ Rails.application.configure do
     :address => 'smtp.gmail.com',
     :port => '587',
     :authentication => :plain,
-    :user_name => '',
+    :user_name =>  '',
     :password => '',
     :domain => 'gmail.com',
     :enable_starttls_auto => true

@@ -1,5 +1,10 @@
 <% if current_user %>
-    <h3>Organization: <%= @tenant.name %></h3>
+    <%debugger%>
+    <div class="container">
+        <div class="homepage">
+            <h3>Organization: <%= @tenant.name %></h3>
+        </div>
+    </div>
 <% else %>
     <div class="container1 demo">
         <div class="content">
@@ -10,15 +15,16 @@
             <div class="row">
                 <div class="plans clearfix">
                 <div class="card col-lg-3 col-lg-offset-3 plan">
-                    <h2>Premium Plan</h2>
+                    <h2>Free Plan</h2>
                     <div class="price pull-right">
-                    Price: ₹1000
+                    FREE
                     </div>
                     <div class="features">
                     <ul>
-                        <li>Unlimited Image Uploads</li>
+                        <li>Unlimited Images</li>
                         <li>Responsive design</li>
                         <li>Access anywhere</li>
+                        <li>1 Project</li>
                     </ul>
                     </div>
                     <p>
@@ -26,16 +32,16 @@
                     </p>
                 </div>
                 <div class="card col-lg-3 plan">
-                    <h2>Amaze Plan</h2>
+                    <h2>Premium Plan</h2>
                     <div class="price pull-right">
-                    Price: ₹2000
+                    Price: ₹1000
                     </div>
                     <div class="features">
                     <ul>
-                        <li>Unlimited Image</li>
+                        <li>Unlimited Images</li>
                         <li>Responsive design</li>
                         <li>Access anywhere</li>
-                        <li class='extra'>Unlimited projects</li>
+                        <li>Unlimited Projects</li>
                     </ul>
                     </div>
                     <p>

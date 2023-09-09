@@ -198,6 +198,12 @@ padding:0;
     color:#171717 !important;
     border: 0px black solid;
 }
+footer a{
+    color:white;
+}
+footer a:hover{
+    color:#d9534f
+}
 footer p{
     height:23px;
     margin-top:2px;
@@ -271,4 +277,28 @@ color: #fff;
 }
 .no-right-padding{
     padding-right:0!important;
+}
+.flash{
+    position:absolute;
+    width:100%;
+    z-index:1;
+    margin-bottom:0;
+}
+.homepage{
+    color:black;
+}
+.member{
+    width:50%;
+    position: absolute;
+    top:8px;
+    right:500px;
+}
+.user-name, .logout{
+    position:absolute;
+    top:-8px;
+    left:123px;
+}
+.logout{
+    padding:0;
+    width:20%;
 }

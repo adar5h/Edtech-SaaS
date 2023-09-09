@@ -1,7 +1,5 @@
 class ConfirmationsController < Milia::ConfirmationsController
-
-  skip_before_action :authenticate_tenant!
-  before_action      :set_confirmable, :only => [ :update, :show ]
+  before_action :set_confirmable, :only => [ :update, :show ]
 
 
   # PUT /resource/confirmation
@@ -58,7 +56,7 @@ class ConfirmationsController < Milia::ConfirmationsController
   end
 
     def after_confirmation_path_for(resource_name, resource)
-      user_signed_in? ? root_path : new_user_session_path
+      user_signed_in? ? user_session_path : new_user_session_path
     end
 
   private
