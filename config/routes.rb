@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  resources :tenants do #Will generate the routes as /tenants/:tenant_id/projects
+    resources :projects
+  end
   resources :members
   get 'home/index'
   root :to => "home#index"

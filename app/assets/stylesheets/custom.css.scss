@@ -284,6 +284,12 @@ color: #fff;
     z-index:1;
     margin-bottom:0;
 }
+li{
+    color:black;
+}
+.features li{
+    color:white;
+}
 .homepage{
     color:black;
 }
@@ -301,4 +307,12 @@ color: #fff;
 .logout{
     padding:0;
     width:20%;
+}
+.table tr td {
+    a.main-link {
+    color: #428bca;
+    }
+    a.main-link:hover {
+    background: none;
+    }
 }
