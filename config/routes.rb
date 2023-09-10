@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :artifacts
   resources :tenants do #Will generate the routes as /tenants/:tenant_id/projects
     resources :projects
   end
