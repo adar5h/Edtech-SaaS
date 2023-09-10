@@ -1,10 +1,11 @@
 <% if current_user %>
     <div class="container">
         <div class="homepage">
-            <h3>Organization: <%= @tenant.name %></h3>
+            <h3 class="pull-right">Organization: <%= @tenant.name %></h3>
+            <%= render 'projects/list'%>
         </div>
     </div>
-<% else %>
+<% else %>  
     <div class="container1 demo">
         <div class="content">
             <div id="large-header" class="large-header">
@@ -40,7 +41,7 @@
                         <li>Unlimited Images</li>
                         <li>Responsive design</li>
                         <li>Access anywhere</li>
-                        <li>Unlimited Projects</li>
+                        <li><strong>Unlimited Projects</strong></li>
                     </ul>
                     </div>
                     <p>
