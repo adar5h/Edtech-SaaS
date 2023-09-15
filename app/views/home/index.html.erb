@@ -5,7 +5,7 @@
             <%= render 'projects/list'%>
         </div>
     </div>
-<% else %>  
+<% else %>
     <div class="container1 demo">
         <div class="content">
             <div id="large-header" class="large-header">
@@ -28,7 +28,7 @@
                     </ul>
                     </div>
                     <p>
-                    <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
+                    <%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'button-35' %>
                     </p>
                 </div>
                 <div class="card col-lg-3 plan">
@@ -45,7 +45,7 @@
                     </ul>
                     </div>
                     <p>
-                    <%= link_to 'Sign Up', new_user_registration_path, class: 'button-35' %>
+                    <%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'),  class: 'button-35' %>
 
                     </p>
                 </div>
