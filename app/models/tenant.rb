@@ -5,6 +5,15 @@ class Tenant < ApplicationRecord
    has_many :projects, dependent: :destroy
    validates_uniqueness_of :name
    validates_presence_of :name
+   has_one :payment
+   accepts_nested_attributes_for :payment
+   # when a tenant is going to sign up, its going to be handled through the registrations/new form and in that form not only are we going to hit the tenant table but also the payments table
+  # So the user accepts the nested attributes for payment through form submission.
+
+  # We have User/Tenant and Payment, where a user makes a payment.
+  # With this setup, if you want to create a user along with payment for that user in a single form submission, you can do something like this in your controller and view.
+  # When the user form is submitted, the attributes for both the tenant and the associated payment are sent to the controller.
+  # The accepts_nested_attributes_for declaration in this model allows the nested attributes for payment to be processed and associated with the tenant.
 
    def can_create_projects?
     (plan == 'free' && projects.count < 1 ) || (plan == 'premium')
