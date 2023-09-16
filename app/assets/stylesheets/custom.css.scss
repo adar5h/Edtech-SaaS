@@ -304,10 +304,10 @@ color: #fff;
 .no-right-padding{
     padding-right:0!important;
 }
-.flash{
+.root-flash{
     position:absolute;
     width:100%;
-    z-index:1;
+    z-index:1!important;
     margin-bottom:0;
 }
 li{
