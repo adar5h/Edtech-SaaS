@@ -354,6 +354,7 @@ dl{
 .button-35:hover{
     box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0!important;
     background:#121212!important;
+    border: 1px solid white;
 }
 .af {
     color:black;
@@ -371,4 +372,7 @@ dl{
 }
 .userz{
     color:black!important;
+}
+.root-footer:hover{
+    color: white!important;
 }

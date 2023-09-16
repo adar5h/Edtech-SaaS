@@ -31,7 +31,11 @@
       </div><!--/row-->
 
       <footer>
-        <center><p class="footer <%= 'root-footer' if current_page?(root_path) %>">&copy; <a href="https://github.com/adar5h">Adarsh 2023</a></p></center>
+        <% if user_signed_in? %>
+         <center><p class='footer'>&copy; <a href="https://github.com/adar5h">Adarsh 2023</a></p></center>
+        <%else%>
+         <center><p class="footer <%= 'root-footer' if current_page?(root_path) %>">&copy; <a href="https://github.com/adar5h">Adarsh 2023</a></p></center>
+        <%end%>
       </footer>
 
     </div> <!-- /container -->
