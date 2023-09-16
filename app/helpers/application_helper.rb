@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include FontAwesome::Rails::IconHelper
   ALERT_TYPES = [:success, :info, :warning, :danger] unless const_defined?(:ALERT_TYPES)
 
   def bootstrap_flash(options = {})

@@ -320,14 +320,20 @@ li{
     color:black;
 }
 .member{
-    width:50%;
+    width:30%;
     position: absolute;
     top:8px;
-    right:500px;
+    left:-300px;
+}
+.plan-icon{
+    width:30%;
+    position: absolute;
+    top:8px;
+    left:-180px;
 }
 .user-name, .logout{
     position:absolute;
-    top:-8px;
+    top:-6px;
     left:123px;
 }
 .logout{
@@ -355,4 +361,11 @@ dl{
 .field_with_errors{
     background-color: rgba(255, 0, 0, 0.3)!important;
     border-radius:5px;
+}
+.header-icon{
+    height:30px;
+    width:30px;
+    position:absolute;
+    left: 230px;
+    bottom:10px;
 }

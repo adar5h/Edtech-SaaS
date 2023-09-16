@@ -9,7 +9,7 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-    <%= javascript_include_tag "https://js.stripe.com/v2/"%>
+    <%= javascript_include_tag "https://js.stripe.com/v3/"%>
     <%= javascript_include_tag "application" %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -19,46 +19,7 @@
   </head>
   <body>
 
-    <div class="navbar navbar-default navbar-static-top" id="nb">
-      <div class="lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="container">
-      </div>
-      <div class="container">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">EdtechSaaS</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-right col-md-4">
-            <% if current_user %>
-              <%= link_to "<i class='fa fa-users'></i> Add Members".html_safe,new_member_path,class: 'button-35 member' %>
-              <li class="col-md-8 user-name">
-              <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, edit_user_registration_path, title: 'Edit Profile' %>
-              </li>
-              <li class="col-md-1"> </li>
-              <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
-            <% else %>
-              <% if current_page?(root_path)%>
-                  <li class="col-md-4 pull-right">
-                  <%= link_to('Sign In', new_user_session_path, class: 'button-35 aa', title: 'Sign In') %>
-                  </li>
-              <%else%>
-                  <li class="col-md-4 pull-right">
-                  <%= link_to('Sign Up', new_user_registration_path, class: 'button-35 aa', title: 'Sign ') %>
-                  </li>
-              <%end%>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <%= render 'common/navbar' %>
     <div class="seperator">
     </div>
     <div class="container <%= 'root-container' if current_page?(root_path) %>">

@@ -72,3 +72,4 @@ gem 'devise-bootstrap-views'
 gem 'bootstrap-datepicker-rails'
 gem 'aws-sdk'
 gem 'stripe'
+gem "font-awesome-rails"
