@@ -1,24 +1,6 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Gmail SMTP setup for email confirmations.
+2. Used Devise for signin/signup and milia for multi-tenancy.
+3. AWS bucket to upload the user uploaded data.
+4. Stripe payment funcitonality.
+5. Added admin functionality with access to all the projects of an organiztion.
