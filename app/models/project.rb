@@ -2,6 +2,8 @@ class Project < ApplicationRecord
   belongs_to :tenant
   validates_uniqueness_of :title
   has_many :artifacts, dependent: :destroy
+  has_many :user_projects
+  has_many :users, through: :user_projects
   validate :free_plan
 
   def free_plan
@@ -10,12 +12,13 @@ class Project < ApplicationRecord
     end
   end
 
-  def self.by_plan_and_tenant(tenant_id)
-    tenant = Tenant.find tenant_id
+  def self.by_user_plan_and_tenant(tenant_id, user)
+    tenant = Tenant.find(tenant_id)
+
     if tenant.plan == 'premium'
-      tenant.projects
+      user.is_admin? ? tenant.projects : user.projects.where(tenant_id: tenant.id)
     else
-      tenant.projects.order(:id).limit(1)
+      user.is_admin? ? tenant.projects.order(:id).limit(1) : user.projects.where(tenant_id: tenant.id)
     end
   end
 
